@@ -18,6 +18,8 @@ Welcome to my YouTube channel's website! This site provides viewers with additio
 
 ##Contact
 
-YouTube Channel
+YouTube Channel- VMXROHITGAMEING
+
 Instagram 
+
 Email
