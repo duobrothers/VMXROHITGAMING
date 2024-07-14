@@ -15,7 +15,7 @@ Welcome to my YouTube channel's website! This site provides viewers with additio
 
 ## Installation
 
-https://github.com/duobrothers/VMXROHITGAMING.git
+https://github.com/duobtothers/VMXROHITGAMING/blob/main/README.md
 
 ##License
   
