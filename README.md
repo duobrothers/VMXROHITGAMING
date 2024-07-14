@@ -11,7 +11,15 @@ Welcome to my YouTube channel's website! This site provides viewers with additio
 - **Video Archive:** Watch all my YouTube videos directly on the site.
 - **Blog:** Read my latest thoughts, tutorials, and updates.
 - **Chat:** Interact with other viewers and participate in discussions
+# My YouTube Channel website
 
+## Installation
+
+To set up the website locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/duobrothers/your-VMXROHITGAMINH.git
 ##License
   
   This project is licensed under the MIT License. See the LICENSE file for details.
