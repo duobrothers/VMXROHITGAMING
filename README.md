@@ -13,8 +13,6 @@ Welcome to my YouTube channel's website! This site provides viewers with additio
 - **Chat:** Interact with other viewers and participate in discussions
 # My YouTube Channel website
 
-## Installation
-https://github.com/duobtothers/VMXROHITGAMING/blob/main/README.md
 
 ##License
   
