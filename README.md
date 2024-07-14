@@ -12,7 +12,8 @@ Welcome to my YouTube channel's website! This site provides viewers with additio
 - **Blog:** Read my latest thoughts, tutorials, and updates.
 - **Chat:** Interact with other viewers and participate in discussions
 # Chat with me and other just one click
-content://com.coloros.filemanager/root/storage/emulated/0/index.htm
+
+
 
 
 ##License
