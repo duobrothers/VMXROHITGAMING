@@ -19,7 +19,7 @@ To set up the website locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/duobrothers/your-VMXROHITGAMINH.git
+   git clone https://github.com/duobrothers/VMXRHOITGAMING.git
 ##License
   
   This project is licensed under the MIT License. See the LICENSE file for details.
