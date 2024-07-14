@@ -1,6 +1,6 @@
 # VMXROHITGAMING
 
-![My channel interface](./Screenshot_2024-07-13-06-25-13-65_f9ee0578fe1cc94de7482bd41accb329.jpg)
+![My channel interface](./Screenshot_2024-07-14-07-18-34-07_f9ee0578fe1cc94de7482bd41accb329.jpg)
 
 # My YouTube Channel Website
 
