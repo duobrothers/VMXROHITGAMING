@@ -1,3 +1,7 @@
+
+
+// JavaScript for Racing Game
+
 function sendMessage() {
     const input = document.getElementById('chatInput');
     const message = input.value.trim();
@@ -94,4 +98,3 @@ function moveBike() {
 
 // Update bike position continuously
 setInterval(moveBike, 1000 / 60); // Adjust speed as needed
-
