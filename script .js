@@ -1,5 +1,3 @@
-// JavaScript for Racing Game
-
 function sendMessage() {
     const input = document.getElementById('chatInput');
     const message = input.value.trim();
