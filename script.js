@@ -1,4 +1,6 @@
-// JavaScript for Racing Game
+
+
+// JavaScript for Racing Game
 
 function sendMessage() {
     const input = document.getElementById('chatInput');
@@ -7,6 +9,7 @@ function sendMessage() {
         const chatMessages = document.getElementById('chatMessages');
         const messageElement = document.createElement('div');
         messageElement.textContent = message;
+        messageElement.classList.add('chat-message'); // Add class for styling
         chatMessages.appendChild(messageElement);
         input.value = '';
         chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -21,7 +24,9 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Bike dimensions and initial position
+// Bike image and dimensions
+const bikeImg = new Image();
+bikeImg.src = 'path/to/bike.png'; // Update with the path to your bike image
 const bikeWidth = 50;
 const bikeHeight = 100;
 let bikeX = canvas.width / 2 - bikeWidth / 2;
@@ -32,67 +37,44 @@ let bikeSpeedX = 0;
 let bikeSpeedY = 0;
 const bikeSpeed = 5;
 
+// Background image
+const bgImg = new Image();
+bgImg.src = 'path/to/background.png'; // Update with the path to your background image
+let bgY = 0;
+
+// Obstacles
+const obstacles = [];
+const obstacleWidth = 50;
+const obstacleHeight = 100;
+const obstacleSpeed = 5;
+let score = 0;
+
+// Draw the bike
 function drawBike() {
-    ctx.fillStyle = '#ffffff'; // Bike color
-    ctx.fillRect(bikeX, bikeY, bikeWidth, bikeHeight);
+    ctx.drawImage(bikeImg, bikeX, bikeY, bikeWidth, bikeHeight);
 }
 
-function clearCanvas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-function update() {
-    clearCanvas();
-    drawBike();
-    requestAnimationFrame(update);
-}
-
-update();
-
-// Handle keyboard controls
-const keys = {};
-document.addEventListener('keydown', (e) => {
-    keys[e.key] = true;
-});
-
-document.addEventListener('keyup', (e) => {
-    keys[e.key] = false;
-});
-
-function moveBike() {
-    if (keys['ArrowRight'] || keys['Right']) {
-        bikeSpeedX = bikeSpeed;
-    } else if (keys['ArrowLeft'] || keys['Left']) {
-        bikeSpeedX = -bikeSpeed;
-    } else {
-        bikeSpeedX = 0;
-    }
-
-    if (keys['ArrowUp'] || keys['Up']) {
-        bikeSpeedY = -bikeSpeed;
-    } else if (keys['ArrowDown'] || keys['Down']) {
-        bikeSpeedY = bikeSpeed;
-    } else {
-        bikeSpeedY = 0;
-    }
-
-    // Update bike position
-    bikeX += bikeSpeedX;
-    bikeY += bikeSpeedY;
-
-    // Boundary detection (wrap around)
-    if (bikeX > canvas.width) {
-        bikeX = -bikeWidth;
-    } else if (bikeX < -bikeWidth) {
-        bikeX = canvas.width;
-    }
-
-    if (bikeY > canvas.height) {
-        bikeY = -bikeHeight;
-    } else if (bikeY < -bikeHeight) {
-        bikeY = canvas.height;
+// Draw the background
+function drawBackground() {
+    ctx.drawImage(bgImg, 0, bgY, canvas.width, canvas.height);
+    ctx.drawImage(bgImg, 0, bgY - canvas.height, canvas.width, canvas.height);
+    bgY += obstacleSpeed;
+    if (bgY >= canvas.height) {
+        bgY = 0;
     }
 }
 
-// Update bike position continuously
-setInterval(moveBike, 1000 / 60); // Adjust speed as needed
+// Draw obstacles
+function drawObstacles() {
+    obstacles.forEach((obstacle, index) => {
+        ctx.fillStyle = 'red';
+        ctx.fillRect(obstacle.x, obstacle.y, obstacleWidth, obstacleHeight);
+        obstacle.y += obstacleSpeed;
+        if (obstacle.y > canvas.height) {
+            obstacles.splice(index, 1);
+            score++;
+        }
+    });
+}
+
+// Check
