@@ -26,7 +26,7 @@ canvas.height = window.innerHeight;
 
 // Bike image and dimensions
 const bikeImg = new Image();
-bikeImg.src = 'path/to/bike.png'; // Update with the path to your bike image
+bikeImg.src = 'path/to/bike.png.png'; // Update with the path to your bike image
 const bikeWidth = 50;
 const bikeHeight = 100;
 let bikeX = canvas.width / 2 - bikeWidth / 2;
