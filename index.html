@@ -7,16 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">VMXROHITGAMING</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#chat">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-dark" id="darkModeToggle">Toggle Dark Mode</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container">
-        <h1>VMXROHITGAMING</h1>
-        <div class="image-container">
-            <img src="./Screenshot_2024-07-14-07-18-34-07_f9ee0578fe1cc94de7482bd41accb329.jpg" alt="My channel interface">
+        <h1 class="text-center">VMXROHITGAMING</h1>
+        <div class="text-center mb-4">
+            <img src="./Screenshot_2024-07-14-07-18-34-07_f9ee0578fe1cc94de7482bd41accb329.jpg" class="img-fluid" alt="My channel interface">
         </div>
-        <h2>My YouTube Channel Website</h2>
-        <p>Welcome to my YouTube channel's website! This site provides viewers with additional content, resources, and a way to interact with the community.</p>
+        <h2 class="text-center">My YouTube Channel Website</h2>
+        <p class="text-center">Welcome to my YouTube channel's website! This site provides viewers with additional content, resources, and a way to interact with the community.</p>
         
-        <h3>Features</h3>
+        <h3 id="features">Features</h3>
         <ul>
             <li><strong>Video Archive:</strong> Watch all my YouTube videos directly on the site.</li>
             <li><strong>Blog:</strong> Read my latest thoughts, tutorials, and updates.</li>
@@ -25,29 +47,35 @@
 
         <h3>Chat with me and others with just one click</h3>
 
-        <div class="chat-container">
+        <div id="chat" class="chat-container">
             <h2>Welcome to the Chat!</h2>
             <div class="chat-messages" id="chatMessages"></div>
-            <input type="text" id="chatInput" class="chat-input" placeholder="Type a message...">
-            <button class="chat-button" onclick="sendMessage()">Send</button>
+            <input type="text" id="chatInput" class="form-control chat-input" placeholder="Type a message...">
+            <button class="btn btn-primary mt-2 chat-button" onclick="sendMessage()">Send</button>
         </div>
         
-        <div class="link">
-            <a href="https://github.com/duobrothers/VMXROHITGAMING/blob/main/README.md" target="_blank">View README.md</a>
+        <div class="link mt-4">
+            <a href="https://github.com/duobrothers/VMXROHITGAMING/blob/main/README.md" target="_blank" class="btn btn-info">View README.md</a>
         </div>
 
-        <h3>License</h3>
+        <h3 class="mt-4">License</h3>
         <p>This project is licensed under the MIT License. See the LICENSE file for details.</p>
 
-        <h3>Contact</h3>
+        <h3 id="contact">Contact</h3>
         <p>YouTube Channel: VMXROHITGAMING</p>
         <p>Instagram: [Your Instagram Handle]</p>
         <p>Email: [Your Email Address]</p>
     </div>
 
     <!-- Racing Game Canvas -->
-    <canvas id="gameCanvas"></canvas>
+    <canvas id="gameCanvas" class="w-100 mt-4" style="border: 1px solid #ccc;"></canvas>
+
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">&copy; 2024 VMXROHITGAMING. All rights reserved.</span>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-</html>a
+</html>
