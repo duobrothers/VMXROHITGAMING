@@ -1,5 +1,3 @@
-
-
 // JavaScript for Racing Game
 
 function sendMessage() {
