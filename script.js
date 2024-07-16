@@ -1,6 +1,4 @@
-
-
-// JavaScript for Racing Game
+// JavaScript for Racing Game
 
 function sendMessage() {
     const input = document.getElementById('chatInput');
