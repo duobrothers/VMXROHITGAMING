@@ -57,3 +57,9 @@ footer {
 body.dark-mode footer {
     background-color: #1f1f1f;
 }
+canvas {
+    display: block;
+    margin: 20px auto;
+    background-color: #000;
+    border: 1px solid #fff;
+}
