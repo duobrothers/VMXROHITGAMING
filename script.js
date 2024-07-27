@@ -23,4 +23,8 @@ const socket = new WebSocket('ws://localhost:8080');
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width =
+canvas.width = canvas.clientWidth;
+canvas.height = canvas.clientHeight;
+
+let players = {};
+
