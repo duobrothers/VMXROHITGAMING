@@ -2,8 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling on mobile */
+    overflow: auto; /* Allow scrolling */
     background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 .container {
     max-width: 800px;
@@ -21,6 +26,11 @@ body {
     padding: 10px;
     height: 300px;
     overflow-y: scroll;
+    background-color: #ffffff;
+}
+body.dark-mode .chat-messages {
+    background-color: #333333;
+    color: #ffffff;
 }
 .chat-message {
     margin-bottom: 10px;
@@ -41,9 +51,9 @@ body {
     text-align: center;
     margin-top: 20px;
 }
-canvas {
-    display: block;
-    margin: 20px auto;
-    background-color: #000000;
-    border: 2px solid #ffffff;
+footer {
+    background-color: #f0f0f0;
+}
+body.dark-mode footer {
+    background-color: #1f1f1f;
 }
